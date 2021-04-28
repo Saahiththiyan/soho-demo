@@ -1,0 +1,41 @@
+@import "../../common/variables";
+
+.user-wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+  .button {
+    background-color: $gh-blue; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .json-string {
+    background-color: $gh-purple;
+    padding: 2%;
+    color: white;
+  }
+  .row {
+    .column {
+      float: left;
+      width: 33%;
+      .col-item {
+        background-color: $gh-purple-light;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 0 5px 5px 5px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+  }
+}
