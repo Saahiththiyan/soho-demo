@@ -10,10 +10,6 @@ export default function Pagination(props) {
         <Link
           to={"/search/" + props.query + "/" + (i + 1)}
           key={i + 1}
-          onClick={(e) => {
-            // e.preventDefault();
-            props.handlePagination(i + 1);
-          }}
           className={parseInt(props.currentPatge) === i + 1 ? "active" : ""}
         >
           {i + 1}

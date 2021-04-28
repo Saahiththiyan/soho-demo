@@ -22,6 +22,13 @@ export default function Search() {
   const dispatch = useDispatch();
   const { name, pageNo } = useParams();
 
+  /*
+    on every change the onSearch function is run. 
+    on each change to searchbar the 1 second wait 
+    timer is reset. if the user did not do any change 
+    to the searchbar the timer expires and the action
+    is dispatched
+  */
   const onSearch = (e) => {
     setQuery(e.target.value);
     setPageNumber(1);
@@ -31,10 +38,6 @@ export default function Search() {
         dispatch(getUsers(e.target.value, pageNumber));
       }, 1000)
     );
-  };
-  const handlePagination = (page) => {
-    setPageNumber(page);
-    dispatch(getUsers(query, page));
   };
 
   useEffect(() => {
@@ -56,7 +59,6 @@ export default function Search() {
           value={query}
           onChange={onSearch}
         />
-        {/* <button onClick={onSearch}>find</button> */}
       </div>
       {users.length > 0 ? (
         <div>
@@ -75,7 +77,6 @@ export default function Search() {
                 <Pagination
                   query={query}
                   totalUsersFound={totalUsersFound}
-                  handlePagination={handlePagination}
                   currentPatge={pageNumber}
                 />
               </div>
