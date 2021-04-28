@@ -5,7 +5,7 @@ This app uses React(UI redering), React Router(Routing), Redux(Global Store), Re
 
 ### Searching
 
-Simply start searching users by typing the github login name into the search bar. The search bar uses live search. So the search will be done while u type. But the github api will only accept 10 requests per minute. For this reason a 2 second timeout is set for the user to stop typing.
+Simply start searching users by typing the github login name into the search bar. The search bar uses live search. So the search will be done while u type. But the github api will only accept 10 requests per minute. For this reason a 2 second timeout is set when stopped typing inside the search bar.
 
 ### User Detail
 
@@ -19,11 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -32,7 +27,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deploying
+
+This app is hosted in netlify. Source code is hosted in Github. Pushing the changes to the master branch in github will trigger the deployement.
 
 ## Requirements
 
