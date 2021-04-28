@@ -3,6 +3,8 @@
 This is a simple app built with react to search github users and get their details.
 This app uses React(UI redering), React Router(Routing), Redux(Global Store), ReduxThunk(Async dispatching), NodeSass(Sass preprocess styling), Axios(for api requests)
 
+[DEMO](https://soho-demo.netlify.app/)
+
 ### Searching
 
 Simply start searching users by typing the github login name into the search bar. The search bar uses live search. So the search will be done while u type. But the github api will only accept 10 requests per minute. For this reason a 2 second timeout is set when stopped typing inside the search bar.
